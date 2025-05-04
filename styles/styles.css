@@ -19,7 +19,8 @@ body {
 
 
 #quote-box {
-  width: 450px;
+  width: 80vw;
+  max-width: 450px;
   padding: 30px;
   height: fit-content;
   text-align: center;
@@ -29,7 +30,7 @@ body {
 
 
 #quote-text {
-  font-size: 25px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -41,32 +42,36 @@ body {
 
 .quote-right {
   position: relative;
-  top: 10px;
+  top: 5px;
 }
 
 #author-name {
   margin-bottom: 20px;
   text-align: right;
   padding-right: 20px;
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+
 }
 
 #buttons-container {
-  display: flex;
-  justify-content: space-between
+  display: grid;
+  justify-items: end;
 }
 
 
 #new-quote {
+  grid-column: 3/3;
   border: none;
   border-radius: 3px;
   font-size: 16px;
-  margin-left: 140px;
+  width: fit-content;
 }
 
 
 #tweet-quote {
+  grid-column: 5/5;
   border-radius: 3px;
-  margin-right: 20px;
+  font-size: 16px;
 }
 
 #new-quote,
@@ -75,6 +80,7 @@ body {
   background-color: var(--background-color);
   cursor: pointer;
   color: #ffe5d9;
+  font-size: clamp(1.1rem, 2vw, 2rem);
 }
 
 #new-quote:hover,
